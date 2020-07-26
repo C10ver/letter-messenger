@@ -1,27 +1,49 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
-import Home from '../views/Home.vue';
+import Login from '../components/Login.vue';
+import Main from '../components/Main.vue';
+import Contacts from '../components/Contacts.vue';
+import Chat from '../components/Chat.vue';
+import state from '../store/index';
+import store from '../store/index';
 
 Vue.use(VueRouter);
 
 const routes: RouteConfig[] = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    component: Main,
+    children: [{
+      path: '/',
+      redirect: 'contacts',
+    },
+    {
+      path: 'contacts',
+      name: 'contacts',
+      component: Contacts,
+    },
+    {
+      path: 'chat',
+      component: Chat,
+      props: true,
+    }],
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/login',
+    name: 'Login',
+    component: Login,
   },
 ];
 
 const router = new VueRouter({
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  const isAuth = store.state.currentUser.name;
+  if(to.name != 'Login' && !isAuth) next({name: 'Login'});
+  else if (to.name == 'Login' && isAuth) next({name: 'contacts'});
+  else next();
 });
 
 export default router;
