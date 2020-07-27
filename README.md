@@ -11,3 +11,7 @@
 2. Склонируйте репозиторий - `git clone https://github.com/C10ver/letter-messenger`
 3. Перейдите в директорию с проектом - `cd letter-messenger`
 4. Установите зависимости - `npm install`
+
+### Демонстрация
+
+Демонстрация приложения - https://letter-messenger.herokuapp.com
