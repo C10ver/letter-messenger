@@ -45,30 +45,6 @@ export default new Vuex.Store({
         avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
         name: 'Иван Иванов',
       },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
-      {
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSb_OsCbk2ds_EqPOrrGTuBxE0g6mnpS-0qSQ&usqp=CAU',
-        name: 'Иван Иванов',
-      },
     ];
 
       commit('SET_CONTACTS', {contacts});
